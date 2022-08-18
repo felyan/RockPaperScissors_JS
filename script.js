@@ -71,4 +71,18 @@ function playGame() {
   });
 }
 
+// Add a click listener to the end game button that runs the endGame() function on click
+let endGameButton = document.getElementById("endGameButton");
+endGameButton.onclick = () => endGame();
+
+// ** endGame function clears all the text on the DOM **
+function endGame() {
+  let playerScore = document.getElementById("player-score");
+  let hands = document.getElementById("hands");
+  let result = document.getElementById("result");
+  playerScore.innerText = "";
+  hands.innerText = "";
+  result.innerText = "";
+}
+
 playGame();
